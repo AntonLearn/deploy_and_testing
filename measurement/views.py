@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+print(f'views.DEBUG before = {DEBUG}')
 print(f'views.DEBUG before = {os.getenv('DEBUG', default='True')}')
 DEBUG = os.getenv('DEBUG', default='True') == 'True'
 print(f'views.DEBUG after = {DEBUG}')
