@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-bl!k2l9r(hu+@5e0jzal7(0fc-5@-qdx^(9a2@%5&ifxc^nu3+
 DEBUG_STRING = os.environ.get('DEBUG')
 DEBUG = DEBUG_STRING == 'True'
 with open('output.txt', 'w') as f:
-    f.write('DEBUG_STRING = ' + repr(DEBUG+STRING))
+    f.write('DEBUG_STRING = ' + repr(DEBUG_STRING) + '\n')
     f.write('DEBUG = ' + repr(DEBUG))
 #DEBUG=False
 #DEBUD=True
