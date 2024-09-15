@@ -8,27 +8,10 @@ from measurement.serializers import CreateMeasurementSerializer
 from measurement.serializers import SensorCreateSerializer
 from measurement.serializers import ShortListSensorsSerializer
 from measurement.serializers import SensorUpdateRetrieveSerializer
-from django.http import HttpResponse
-import os
-from dotenv import load_dotenv
-
-
-load_dotenv()
-
-print(f'views.DEBUG before = {DEBUG}')
-print(f'views.DEBUG before = {os.getenv('DEBUG', default='True')}')
-DEBUG = os.getenv('DEBUG', default='True') == 'True'
-print(f'views.DEBUG after = {DEBUG}')
-# DEBUG=False
-# DEBUG=True
-
-
-def view_debug(request):
-    return HttpResponse(f'debug={DEBUG}')
 
 
 class SensorCreate(ListCreateAPIView):
-    """Создать датчик. Указываются название и описание датчика. New version!"""
+    """Создать датчик. Указываются название и описание датчика. New super version!"""
     queryset = Sensor.objects.all()
     serializer_class = SensorCreateSerializer
 
