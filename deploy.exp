@@ -1,5 +1,5 @@
 #!/bin/bash/expect
 spawn  /opt/dj_prj/deploy.sh
 expect "password for"
-send --"dj"
+send -- "dj"
 expect eof

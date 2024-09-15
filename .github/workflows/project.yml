@@ -61,10 +61,4 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
-          script: |
-            cd /opt/dj_prj
-            git pull origin master
-            source env/bin/activate
-            pip install -r requirements.txt
-            python manage.py migrate
-            script: expect /opt/dj_prj/deploy.exp
+          script: expect /opt/dj_prj/deploy.exp
