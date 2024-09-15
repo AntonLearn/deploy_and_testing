@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn service
+After=network.target
+
+[Service]
+User=dj
+Group=www-data
+WorkingDirectory=/opt/dj_prj
+ExecStart=/opt/dj_prj/env/bin/gunicorn -w 3 -b unix:/opt/dj_prj/prj.soc smart_home.wsgi 
+
+[Install]
+WantedBy=multi-user.target 

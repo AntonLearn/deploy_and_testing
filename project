@@ -1,0 +1,14 @@
+server {
+  listen 80;
+  server_name 194.67.84.106;
+
+  location /static/ {
+    root /opt/dj_prj;
+  }
+
+  location / {
+    include proxy_params;
+    proxy_pass http://unix:/opt/dj_prj/prj.soc;
+  }
+
+}
