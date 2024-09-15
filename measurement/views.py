@@ -11,7 +11,7 @@ from measurement.serializers import SensorUpdateRetrieveSerializer
 
 
 class SensorCreate(ListCreateAPIView):
-    """Создать датчик. Указываются название и описание датчика. Final version!"""
+    """Создать датчик. Указываются название и описание датчика. Super final version!"""
     queryset = Sensor.objects.all()
     serializer_class = SensorCreateSerializer
 
