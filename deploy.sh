@@ -5,3 +5,4 @@ source env/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
 sudo systemctl restart gunicorn
+sudo systemctl daemon-reload

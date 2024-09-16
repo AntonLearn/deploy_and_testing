@@ -6,7 +6,7 @@ After=network.target
 User=dj
 Group=www-data
 WorkingDirectory=/opt/dj_prj
-ExecStart=/opt/dj_prj/env/bin/gunicorn --env DEBUG=True -w 3 -b unix:/opt/dj_prj/prj.soc smart_home.wsgi 
+ExecStart=/opt/dj_prj/env/bin/gunicorn --env DEBUG=False -w 3 -b unix:/opt/dj_prj/prj.soc smart_home.wsgi 
 
 [Install]
 WantedBy=multi-user.target 
